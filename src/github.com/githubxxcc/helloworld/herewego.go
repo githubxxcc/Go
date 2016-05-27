@@ -2,6 +2,7 @@ package main
 
 import ("fmt"
 "strings"
+"github.com/githubxxcc/stringutil"
 )
 
 
@@ -44,5 +45,7 @@ func main(){
 	fmt.Println(strings.Count(someString, "l"))
 
 	fmt.Println(strings.Replace(someString, "l", "x", 2))
+
+	fmt.Println(stringutil.Reverse("!oG, olleH"))
 	
 }
