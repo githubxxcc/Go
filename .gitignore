@@ -1,11 +1,11 @@
 cat .gitignore
 
-#ignore everything
+# ignore everything
 bin/
 src/
 
 
 #but not those
-!src/**/*.go
+
 
 
