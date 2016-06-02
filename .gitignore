@@ -1,15 +1,14 @@
 
 
 # ignore everything
-bin/
-src/
-pkg/
-
+*
 
 #but not those
-
+!*/
 !src/**/*.go
 !.gitignore
+
+
 
 
 
