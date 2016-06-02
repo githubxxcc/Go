@@ -9,6 +9,8 @@ pkg/
 #but not those
 
 !src/**/*.go
+!.gitignore
+
 
 
 
