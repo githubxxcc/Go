@@ -1,14 +1,17 @@
 
 
 # ignore everything
-*
+bin/
+pkg/
 
 #but not those
 !*/
 !src/github.com/githubxxcc/**/*.go
 !src/github.com/wobe-pte-ltd/
-!.gitignore
 
+
+# Only allow one root .gitignore
+**/.gitignore
 
 
 
