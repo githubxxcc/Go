@@ -1,14 +1,32 @@
-package main
+package mandelbrot
 
 import (
 	"image"
 	"image/color"
 	"image/png"
+	"io"
 	"math/cmplx"
-	"os"
 )
 
-func main() {
+func mandelbrot(z complex128) color.Color {
+	const (
+		iteration = 200
+		contrast  = 15
+	)
+
+	var v complex128
+
+	for n := uint8(0); n < iteration; n++ {
+		v = v*v + z
+		if cmplx.Abs(v) > 2 {
+			return color.RGBA{200, 255 - n*contrast, n * contrast / 255, 255}
+		}
+	}
+
+	return color.Black
+}
+
+func GetMandelbrot(w io.Writer) {
 	const (
 		height, width          = 1024, 1024
 		xmin, ymin, xmax, ymax = -2, -2, 2, 2
@@ -26,23 +44,5 @@ func main() {
 		}
 	}
 
-	png.Encode(os.Stdout, img)
-}
-
-func mandelbrot(z complex128) color.Color {
-	const (
-		iteration = 200
-		contrast  = 15
-	)
-
-	var v complex128
-
-	for n := uint8(0); n < iteration; n++ {
-		v = v*v + z
-		if cmplx.Abs(v) > 2 {
-			return color.RGBA{200, 255 - n*contrast, n * contrast / 255, 255}
-		}
-	}
-
-	return color.RGBA{100, 100, 50, 200}
+	png.Encode(w, img)
 }

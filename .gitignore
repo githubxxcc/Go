@@ -1,17 +1,28 @@
 
 
+
 # ignore everything
 bin/
 pkg/
+src/github.com/*
+src/golang.org/
+src/gopl.io/
+
+
 
 #but not those
-!*/
-!src/github.com/githubxxcc/**/*.go
-!src/github.com/wobe-pte-ltd/
-
+!src/github.com/githubxxcc/
 
 # Only allow one root .gitignore
 **/.gitignore
+
+# extensions ending with
+.DS_Store
+*.exe
+*.gif
+*.png
+*.jpg
+
 
 
 
