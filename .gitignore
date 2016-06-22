@@ -5,7 +5,8 @@
 
 #but not those
 !*/
-!src/**/*.go
+!src/github.com/githubxxcc/**/*.go
+!src/github.com/wobe-pte-ltd/
 !.gitignore
 
 
