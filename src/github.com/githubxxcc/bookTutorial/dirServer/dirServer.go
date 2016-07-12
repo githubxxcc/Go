@@ -42,4 +42,10 @@ func handleConn(c net.Conn) {
 		}
 	}
 
+	s := string(buf)
+
+	if s == "Case1" {
+
+	}
+
 }
