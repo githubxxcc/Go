@@ -5,7 +5,7 @@
 bin/
 pkg/
 src/github.com/*
-src/golang.org
+src/golang.org/
 src/gopl.io/
 src/github.com/githubxxcc/nodeTest
 src/gopkg.in/
